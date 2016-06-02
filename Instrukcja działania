@@ -1,0 +1,14 @@
+Sposób użycia
+
+Say we want to encrypt/ decrypt a file named /home/user/sample.txt
+
+Generate a keyfile using:
+
+run_des.o -g /tmp/keyfile.key
+Encrypt sample.txt using:
+
+run_des.o -e /tmp/keyfile.key /home/user/sample.txt /home/user/sample.enc
+Decrypt sample.txt using:
+
+run_des.o -d /tmp/keyfile.key /home/user/sample.enc /home/user/sample_decrypted.txt
+Don't lose the key file! you won't be able to decrypt an encrypted if you lose the keyfile.
